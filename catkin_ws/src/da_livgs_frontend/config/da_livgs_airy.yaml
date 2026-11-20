@@ -1,0 +1,76 @@
+odometry_mode: 1
+
+lidar_yaml: /airy/lidar.yaml
+imu_yaml: /airy/imu.yaml
+camera_yaml: /airy/camera.yaml
+
+bag_path: /path/to/your_dataset.bag
+bag_start: 0.0
+bag_durr: -1.0
+
+t_add: 0.1
+distance0: 0.03
+non_uniform: true
+division_coarse: 1
+
+t_begin_add_cam: 5.0
+lidar_iter: 2
+use_lidar_scale: true
+lidar_weight: 500.0
+image_weight: 4.0
+gyroscope_noise_density: 3.45557556e-03
+gyroscope_random_walk: 2.617993833e-07
+accelerometer_noise_density: 2.425376259e-02
+accelerometer_random_walk: 1.96e-06
+
+is_evo_viral: false
+
+lidar_skip: 20
+
+# Gaussian pose feedback remains observe-only until the timing audit passes.
+gaussian_feedback_shadow_enabled: false
+gaussian_feedback_shadow_maximum_staleness_ms: 100.0
+gaussian_feedback_shadow_maximum_translation_metres: 0.03
+gaussian_feedback_shadow_maximum_rotation_degrees: 0.5
+gaussian_feedback_shadow_linger_seconds: 0.0
+
+# Weak Gaussian endpoint candidate and validation-only factor are disabled by default.
+gaussian_endpoint_prior_shadow_enabled: false
+gaussian_endpoint_prior_require_degradation: true
+gaussian_endpoint_prior_allow_validation: false
+gaussian_endpoint_prior_maximum_source_age_ms: 650.0
+gaussian_endpoint_prior_minimum_confidence: 0.30
+gaussian_endpoint_prior_minimum_consecutive_accepted: 3
+gaussian_endpoint_prior_gain: 1.0
+gaussian_endpoint_prior_maximum_translation_metres: 0.005
+gaussian_endpoint_prior_maximum_rotation_degrees: 0.1
+gaussian_endpoint_factor_enabled: false
+gaussian_endpoint_factor_apply: false
+gaussian_endpoint_factor_validation_only: true
+gaussian_endpoint_factor_maximum_application_age_ms: 250.0
+gaussian_endpoint_factor_rotation_sqrt_information: 0.05
+gaussian_endpoint_factor_translation_sqrt_information: 0.05
+gaussian_endpoint_factor_maximum_sqrt_information: 0.10
+gaussian_endpoint_replay_enabled: false
+gaussian_endpoint_replay_path: ""
+gaussian_endpoint_replay_maximum_release_age_ms: 250.0
+gaussian_endpoint_trust_region_enabled: false
+gaussian_endpoint_trust_region_apply: false
+gaussian_endpoint_trust_region_validation_only: true
+gaussian_endpoint_trust_region_maximum_step_translation_metres: 0.00025
+gaussian_endpoint_trust_region_maximum_step_rotation_degrees: 0.005
+gaussian_endpoint_trust_region_maximum_total_translation_metres: 0.002
+gaussian_endpoint_trust_region_maximum_total_rotation_degrees: 0.04
+gaussian_endpoint_trust_region_maximum_knot_translation_metres: 0.001
+gaussian_endpoint_trust_region_maximum_knot_rotation_degrees: 0.02
+gaussian_endpoint_trust_region_anchor_sqrt_information: 100.0
+gaussian_endpoint_trust_region_target_sqrt_information: 100.0
+gaussian_endpoint_trust_region_maximum_solver_iterations: 8
+# DA-LIVGS paper localization profile.
+support_conditioned_factor_enabled: true
+compact_pnp_enabled: false
+directional_fusion_enabled: false
+adaptive_fusion_enabled: false
+persistent_degeneracy_shadow_enabled: false
+persistent_degeneracy_action_enabled: false
+if_3dgs: true

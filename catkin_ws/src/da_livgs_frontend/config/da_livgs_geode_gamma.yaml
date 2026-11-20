@@ -1,0 +1,142 @@
+odometry_mode: 1  # LIO = 0, LICO = 1
+
+lidar_yaml: /geode_gamma/lidar.yaml
+imu_yaml: /geode_gamma/imu.yaml
+camera_yaml: /geode_gamma/camera.yaml
+
+# Override this portable placeholder with odometry.launch bag_path:=/path/to/file.bag.
+bag_path: /path/to/your_dataset.bag
+bag_start: 0.0
+bag_durr: -1
+
+### SplineParams ###
+t_add: 0.1
+distance0: 0.03
+non_uniform: true
+division_coarse: 1
+
+### OptimizationParams ###
+t_begin_add_cam: 5.0
+lidar_iter: 2
+use_lidar_scale: true
+lidar_weight: 500.0
+image_weight: 4.0
+
+# F1 compact PnP pose factor (off restores the original pointwise factors).
+compact_pnp_minimum_points: 10
+compact_pnp_maximum_translation_delta: 1.0
+compact_pnp_maximum_rotation_delta_deg: 30.0
+compact_pnp_minimum_relative_eigenvalue: 1.0e-8
+compact_pnp_cauchy_scale: 10.0
+
+# B77 support-conditioned pointwise/compact visual-factor policy.
+support_conditioned_factor_warmup_frames: 50
+support_conditioned_factor_support_alpha: 0.20
+support_conditioned_factor_compact_enter_ratio: 0.50
+support_conditioned_factor_compact_exit_ratio: 0.70
+support_conditioned_factor_compact_enter_frames: 5
+support_conditioned_factor_compact_exit_frames: 10
+
+# B81 observer-only persistent four-direction LiDAR degeneracy detector.
+mapping_backpressure_enabled: false
+mapping_backpressure_timeout_seconds: 120.0
+persistent_degeneracy_enter_ratio: 0.002
+persistent_degeneracy_exit_ratio: 0.004
+persistent_degeneracy_enter_frames: 5
+persistent_degeneracy_exit_frames: 10
+
+### F2 directional complementary fusion ###
+directional_fusion_mode: 6  # 1-3: F2, 4: bounded, 5: persistent, 6: fallback, 7: smoothed safe
+directional_lidar_weak_ratio_full: 1.0e-3
+directional_lidar_weak_ratio_zero: 2.0e-2
+directional_visual_complement_ratio_full: 5.0e-2
+directional_innovation_translation_scale: 0.10
+directional_innovation_rotation_scale_deg: 2.0
+directional_minimum_temporal_quality: 0.10
+directional_minimum_visual_weight: 0.25
+directional_activation_enter_score: 0.35
+directional_activation_exit_score: 0.25
+directional_activation_enter_frames: 5
+directional_activation_exit_frames: 10
+directional_minimum_output_rank: 3
+directional_minimum_information_trace_ratio: 0.30
+directional_safety_confidence_trace_zero: 0.25
+directional_safety_confidence_trace_full: 0.40
+directional_safety_confidence_alpha: 0.20
+directional_safety_confidence_fall_alpha: 1.00
+
+### P2 degradation-aware adaptive fusion ###
+adaptive_fusion_mode: 4  # 1: LiDAR only, 2: visual only, 3: joint no hysteresis, 4: full
+adaptive_fusion_warmup_frames: 120
+adaptive_fusion_minimum_visual_samples: 50
+adaptive_fusion_enter_frames: 5
+adaptive_fusion_exit_frames: 10
+adaptive_fusion_score_alpha: 0.2
+adaptive_fusion_weight_alpha: 0.2
+adaptive_fusion_enter_threshold: 0.55
+adaptive_fusion_exit_threshold: 0.70
+adaptive_fusion_minimum_lidar_scale: 0.5
+adaptive_fusion_minimum_visual_scale: 0.35
+adaptive_fusion_maximum_visual_boost: 1.2
+adaptive_fusion_lidar_ratio_bad: 1.0e-5
+adaptive_fusion_lidar_ratio_good: 1.0e-2
+adaptive_fusion_lidar_condition_good: 100.0
+adaptive_fusion_lidar_condition_bad: 1.0e4
+gyroscope_noise_density: 3.45557556e-03
+gyroscope_random_walk: 2.617993833e-07
+accelerometer_noise_density: 2.425376259e-02
+accelerometer_random_walk: 1.96e-06
+
+### EvaluationParams ###
+is_evo_viral: false
+
+### DA-LIVGS ###
+lidar_skip: 10
+
+# Gaussian pose feedback remains observe-only until the timing audit passes.
+gaussian_feedback_shadow_enabled: false
+gaussian_feedback_shadow_maximum_staleness_ms: 100.0
+gaussian_feedback_shadow_maximum_translation_metres: 0.03
+gaussian_feedback_shadow_maximum_rotation_degrees: 0.5
+gaussian_feedback_shadow_linger_seconds: 0.0
+
+# Weak Gaussian endpoint candidate and validation-only factor are disabled by default.
+gaussian_endpoint_prior_shadow_enabled: false
+gaussian_endpoint_prior_require_degradation: true
+gaussian_endpoint_prior_allow_validation: false
+gaussian_endpoint_prior_maximum_source_age_ms: 650.0
+gaussian_endpoint_prior_minimum_confidence: 0.30
+gaussian_endpoint_prior_minimum_consecutive_accepted: 3
+gaussian_endpoint_prior_gain: 1.0
+gaussian_endpoint_prior_maximum_translation_metres: 0.005
+gaussian_endpoint_prior_maximum_rotation_degrees: 0.1
+gaussian_endpoint_factor_enabled: false
+gaussian_endpoint_factor_apply: false
+gaussian_endpoint_factor_validation_only: true
+gaussian_endpoint_factor_maximum_application_age_ms: 250.0
+gaussian_endpoint_factor_rotation_sqrt_information: 0.05
+gaussian_endpoint_factor_translation_sqrt_information: 0.05
+gaussian_endpoint_factor_maximum_sqrt_information: 0.10
+gaussian_endpoint_replay_enabled: false
+gaussian_endpoint_replay_path: ""
+gaussian_endpoint_replay_maximum_release_age_ms: 250.0
+gaussian_endpoint_trust_region_enabled: false
+gaussian_endpoint_trust_region_apply: false
+gaussian_endpoint_trust_region_validation_only: true
+gaussian_endpoint_trust_region_maximum_step_translation_metres: 0.00025
+gaussian_endpoint_trust_region_maximum_step_rotation_degrees: 0.005
+gaussian_endpoint_trust_region_maximum_total_translation_metres: 0.002
+gaussian_endpoint_trust_region_maximum_total_rotation_degrees: 0.04
+gaussian_endpoint_trust_region_maximum_knot_translation_metres: 0.001
+gaussian_endpoint_trust_region_maximum_knot_rotation_degrees: 0.02
+gaussian_endpoint_trust_region_anchor_sqrt_information: 100.0
+gaussian_endpoint_trust_region_target_sqrt_information: 100.0
+gaussian_endpoint_trust_region_maximum_solver_iterations: 8
+# DA-LIVGS paper localization profile.
+support_conditioned_factor_enabled: true
+compact_pnp_enabled: false
+directional_fusion_enabled: false
+adaptive_fusion_enabled: false
+persistent_degeneracy_shadow_enabled: false
+persistent_degeneracy_action_enabled: false
+if_3dgs: true

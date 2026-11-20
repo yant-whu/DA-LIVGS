@@ -1,0 +1,21 @@
+{
+  "repository": "DA-LIVGS",
+  "paper_profile": {
+    "epsilon": 0.48,
+    "rank": 16,
+    "feature_dimension": 16,
+    "embedding_dimension": 16,
+    "hidden_dimension": 64,
+    "knot_interval_frames": 10,
+    "fourier_frequencies": 0,
+    "sh_degree": 1,
+    "seed": 12345
+  },
+  "source_commits": {
+    "frontend": "7d819d8",
+    "mapping": "d628789",
+    "livox_ros_driver": "638e47994bdf9bbe64888eb6cbd6d04167bacc0c"
+  },
+  "dataset_policy": "Datasets, bags, LAS/CSV files, generated maps, engines, and private absolute paths are excluded.",
+  "mapping_head_note": "The original working tree had a later mapping commit. This repository intentionally freezes d628789 because the paper profile was validated against it."
+}

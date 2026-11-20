@@ -1,0 +1,53 @@
+%YAML:1.0
+
+# GEODE gamma left camera at its native calibrated resolution.
+image_topic: /left_camera/image
+
+image_width: 1224
+image_height: 1024
+cam_fx: 1174.433772943354
+cam_fy: 1174.477432586343
+cam_cx: 602.0977604990142
+cam_cy: 506.2372585153649
+cam_d0: -0.058079349939181
+cam_d1: 0.134502746395860
+cam_d2: 1.310282988798364e-05
+cam_d3: 6.216594495554388e-04
+cam_d4: -0.067349697730475
+
+# DA-LIVGS/SPNet keeps its TensorRT-compatible publication size.
+mapping_image_width: 640
+mapping_image_height: 512
+
+CameraExtrinsics:  # left camera to Xsens IMU
+    Trans: [0.02005992, 0.04730513, -0.02083495]
+    Rot: [ 0.00775254, -0.00773646,  0.99994002,
+          -0.99996315,  0.00362840,  0.00778079,
+          -0.00368837, -0.99996349, -0.00770804]
+
+img_time_offset: 0.0
+
+# Tracking-only grayscale preprocessing. Original rectified RGB is unchanged.
+tracking_preprocess_mode: 1  # 0: raw, 1: legacy CLAHE, 2: conditional percentile
+tracking_percentile_low: 0.02
+tracking_percentile_high: 0.98
+tracking_minimum_dynamic_range: 80
+tracking_maximum_black_fraction: 0.10
+tracking_maximum_saturated_fraction: 0.10
+tracking_minimum_usable_range: 8
+
+# Projected map-point quality and spatial selection (tracking only).
+tracking_point_selection_mode: 0  # 0: legacy, 1: quality mask, 2: quality + grid
+tracking_point_border_pixels: 12
+tracking_point_minimum_intensity: 5
+tracking_point_maximum_intensity: 250
+tracking_point_maximum_extreme_fraction: 0.80
+tracking_point_minimum_corner_eigenvalue: 0.0001
+tracking_point_grid_rows: 4
+tracking_point_grid_cols: 6
+tracking_point_minimum_tracked_points: 500
+
+# Optional KLT cycle-consistency filter (tracking only).
+tracking_forward_backward_enabled: false
+tracking_forward_backward_max_error: 0.5
+tracking_forward_backward_pyramid_levels: 1

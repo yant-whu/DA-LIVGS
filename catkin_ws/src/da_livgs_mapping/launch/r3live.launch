@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config_path"       default = "config/da_livgs_r3live_balanced.yaml" />
+
+  <node pkg="da_livgs_mapping" type="da_livgs_mapping" name="da_livgs_mapping" output="screen">
+    <param name="config_path"     type="string" value="$(find da_livgs_mapping)/$(arg config_path)" />
+    <param name="result_path"     type="string" value="$(optenv DA_LIVGS_OUTPUT_ROOT /tmp/da_livgs_outputs)/r3live" />
+    <param name="lpips_path"     type="string" value="$(find da_livgs_mapping)/src/lpips" />
+  </node>
+
+</launch>

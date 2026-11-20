@@ -1,0 +1,4 @@
+# Ignore downloaded SDK binaries and generated top-level files.
+livox_ros_driver/Livox-SDK
+CMakeLists.txt
+!livox_ros_driver/CMakeLists.txt

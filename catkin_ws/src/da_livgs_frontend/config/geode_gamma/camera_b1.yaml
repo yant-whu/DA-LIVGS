@@ -1,0 +1,29 @@
+%YAML:1.0
+
+# GEODE gamma left camera at its native calibrated resolution.
+image_topic: /left_camera/image
+
+image_width: 1224
+image_height: 1024
+cam_fx: 1174.433772943354
+cam_fy: 1174.477432586343
+cam_cx: 602.0977604990142
+cam_cy: 506.2372585153649
+cam_d0: -0.058079349939181
+cam_d1: 0.134502746395860
+cam_d2: 1.310282988798364e-05
+cam_d3: 6.216594495554388e-04
+cam_d4: -0.067349697730475
+
+# DA-LIVGS/SPNet keeps its TensorRT-compatible image size. Intrinsics are
+# scaled at the publishing boundary after front-end tracking and rectification.
+mapping_image_width: 640
+mapping_image_height: 512
+
+CameraExtrinsics:  # left camera to Xsens IMU
+    Trans: [0.02005992, 0.04730513, -0.02083495]
+    Rot: [ 0.00775254, -0.00773646,  0.99994002,
+          -0.99996315,  0.00362840,  0.00778079,
+          -0.00368837, -0.99996349, -0.00770804]
+
+img_time_offset: 0.0

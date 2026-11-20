@@ -1,0 +1,36 @@
+lidar0:
+    topic: /rslidar_front_points
+    is_livox: false
+    Extrinsics:  # lidar to IMU: p_imu = R * p_lidar + t
+        Trans: [0.00425, 0.00418, -0.00446]
+        Rot: [-0.0082098427130477, -0.9999652081824480, 0.0014767895111225,
+              -0.9999587578050865, 0.0082155072710765, 0.0038714505275241,
+              -0.0038834484076902, -0.0014449446051793, -0.9999914154449288]
+num_lidars: 1
+lidar_timestamp_end: false
+
+VLP16:
+    N_SCAN: 96
+    Horizon_SCAN: 900
+    edge_threshold: 1.0
+    surf_threshold: 0.1
+    odometry_surface_leaf_size: 0.4
+    min_distance: 1.0
+    max_distance: 120.0
+
+use_corner_feature: false
+current_scan_param:
+    corner_leaf_size: 0.3
+    surface_leaf_size: 0.4
+    edge_min_valid_num: 10
+    surf_min_valid_num: 100
+    correspondence_downsample: 2
+keyframe_strategy:
+    angle_degree: 10
+    dist_meter: 1.0
+    time_second: 10
+map_param:
+    keyframe_search_radius: 50.0
+    keyframe_search_time: 10.0
+    keyframe_density: 1.0
+    cloud_reserved_time: -1

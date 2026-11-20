@@ -1,0 +1,21 @@
+imu_topic: /rslidar_front_imu_data
+
+imu_excite_threshold: 0.5
+gravity_mag: 9.81
+if_normalized: true
+if_use_init_bg: false
+
+# The evaluation clips begin in motion and carry no orientation quaternion.
+# This bounded fallback is shared by every comparison arm.
+moving_initialization_enabled: true
+moving_initialization_window_seconds: 2.0
+moving_initialization_minimum_acceleration_norm: 7.3575
+moving_initialization_maximum_acceleration_norm: 12.2625
+moving_initialization_maximum_acceleration_residual_mad: 3.0
+moving_initialization_maximum_gyroscope_norm_median: 1.0
+
+IMUExtrinsics:
+    Trans: [0, 0, 0]
+    Rot: [1, 0, 0,
+          0, 1, 0,
+          0, 0, 1]

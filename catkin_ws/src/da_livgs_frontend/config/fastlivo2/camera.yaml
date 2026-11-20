@@ -1,0 +1,48 @@
+%YAML:1.0
+
+image_topic: /left_camera/image  # suffix "compressed" omitted
+
+image_width: 640 
+image_height: 512 
+cam_fx: 646.78472
+cam_fy: 646.65775
+cam_cx: 313.456795
+cam_cy: 261.399612
+cam_d0: -0.076160
+cam_d1: 0.123001
+cam_d2: -0.00113
+cam_d3: 0.000251
+cam_d4: 0.0
+
+CameraExtrinsics:  # camera to imu
+    Trans: [0.0673699, 0.0412418, 0.0764217]
+    Rot: [ 0.00610193, -0.00615449, 0.999962,
+           -0.999863, 0.0153796, 0.00619598,
+           -0.0154172, -0.999863, -0.0060598]
+
+img_time_offset: 0.1  # camera to imu [s]
+
+# Tracking-only grayscale preprocessing. Original rectified RGB is unchanged.
+tracking_preprocess_mode: 0  # 0: raw, 1: legacy CLAHE, 2: conditional percentile
+tracking_percentile_low: 0.02
+tracking_percentile_high: 0.98
+tracking_minimum_dynamic_range: 80
+tracking_maximum_black_fraction: 0.10
+tracking_maximum_saturated_fraction: 0.10
+tracking_minimum_usable_range: 8
+
+# Projected map-point quality and spatial selection (tracking only).
+tracking_point_selection_mode: 1  # 0: legacy, 1: quality mask, 2: quality + grid
+tracking_point_border_pixels: 12
+tracking_point_minimum_intensity: 5
+tracking_point_maximum_intensity: 250
+tracking_point_maximum_extreme_fraction: 0.80
+tracking_point_minimum_corner_eigenvalue: 0.0001
+tracking_point_grid_rows: 4
+tracking_point_grid_cols: 6
+tracking_point_minimum_tracked_points: 500
+
+# Optional KLT cycle-consistency filter (tracking only).
+tracking_forward_backward_enabled: true
+tracking_forward_backward_max_error: 0.5
+tracking_forward_backward_pyramid_levels: 1

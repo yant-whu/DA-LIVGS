@@ -1,0 +1,38 @@
+%YAML:1.0
+
+image_topic: /front_seeker/fisheye/left/image_raw
+
+# Rectified perspective output shared with DA-LIVGS.
+image_width: 640
+image_height: 512
+cam_fx: 268.511882
+cam_fy: 268.511882
+cam_cx: 320.0
+cam_cy: 256.0
+cam_d0: 0.0
+cam_d1: 0.0
+cam_d2: 0.0
+cam_d3: 0.0
+cam_d4: 0.0
+
+# Source Mei omni+radtan model from kalibr_cam_chain.yaml.
+camera_model: omni
+omni_xi: 3.1806842399561104
+omni_fx: 1649.4211092809383
+omni_fy: 1649.1863361722433
+omni_cx: 544.0822773676623
+omni_cy: 613.2190087388457
+omni_d0: -0.092543590387084
+omni_d1: 0.5032707240698221
+omni_d2: 0.0006151968849438273
+omni_d3: 0.004841466117311604
+omni_d4: 0.0
+
+# Camera to Airy IMU, composed as T_imu_lidar * inverse(T_cam_lidar).
+CameraExtrinsics:
+    Trans: [0.106748888, 0.022467739, -0.055236753]
+    Rot: [-0.016390639, -0.999835590, 0.007755025,
+          -0.720099105, 0.017185048, 0.693658384,
+          -0.693677610, 0.005785118, -0.720262387]
+
+img_time_offset: 0.0

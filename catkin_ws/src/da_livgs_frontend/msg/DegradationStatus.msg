@@ -1,0 +1,25 @@
+uint8 STATE_UNAVAILABLE=0
+uint8 STATE_NORMAL=1
+uint8 STATE_SELECTIVE=2
+uint8 STATE_INERTIAL_SAFE=3
+
+std_msgs/Header header
+uint8 fusion_state
+float64[6] lidar_observability
+float64[6] visual_complementarity
+float64 lidar_quality
+float64 visual_quality
+float64 pose_confidence
+float64 normalized_lidar_confidence
+float64 normalized_visual_confidence
+float64 normalized_pose_confidence
+bool confidence_baseline_ready
+bool allow_keyframe
+bool allow_completed_depth
+bool allow_map_extension
+
+bool mapping_pose_overlay_applied
+bool mapping_camera_pose_recovery_applied
+bool mapping_camera_pose_corruption_applied
+uint8 mapping_pose_recovery_mask
+uint8 mapping_pose_corruption_mask

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config_path" default="config/da_livgs_airy_balanced.yaml" />
+  <arg name="result_path" default="$(optenv DA_LIVGS_OUTPUT_ROOT /tmp/da_livgs_outputs)/airy" />
+
+  <node pkg="da_livgs_mapping" type="da_livgs_mapping" name="da_livgs_mapping" output="screen">
+    <param name="config_path" type="string" value="$(find da_livgs_mapping)/$(arg config_path)" />
+    <param name="result_path" type="string" value="$(arg result_path)" />
+    <param name="lpips_path" type="string" value="$(find da_livgs_mapping)/src/lpips" />
+  </node>
+</launch>

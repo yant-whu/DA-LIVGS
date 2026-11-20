@@ -1,0 +1,264 @@
+width: 640
+height: 512
+fx: 646.78472
+fy: 646.65775
+cx: 313.456795
+cy: 261.399612
+
+select_every_k_frame: 5
+depth_completion: true
+patch_size: 10
+max_depth: 20
+
+sh_degree: 1
+white_background: false  # no adjustment needed
+random_background: false  # no adjustment needed
+convert_SHs_python: false  # no adjustment needed
+compute_cov3D_python: false  # no adjustment needed
+lambda_erank: 0  # no adjustment needed
+scaling_scale: 1  # the larger value tends to yield less Gaussians
+
+position_lr: 0.00016
+feature_lr: 0.0050  # the larger value tends to yield better performance
+opacity_lr: 0.05
+scaling_lr: 0.005  # the larger value tends to yield less Gaussians
+rotation_lr: 0.001
+lambda_dssim: 0.2
+optimize_depth: true
+lambda_depth: 0.005
+iteration_decay: false
+mip_filter_enabled: false
+mip_filter_kernel_variance: 0.1
+optimization_view_observer_enabled: false
+mature_refinement_observer_enabled: false
+mature_refinement_candidate_policy_enabled: false
+mature_refinement_stability_diagnostics_enabled: false
+mature_refinement_photometric_utility_diagnostics_enabled: false
+mature_refinement_response_diagnostics_enabled: false
+mature_refinement_response_maximum_evaluations: 2
+mature_refinement_response_held_out_views: 3
+mature_refinement_response_event_interval_calls: 0
+mature_refinement_minimum_observations: 3
+mature_refinement_minimum_opacity: 0.01
+mature_refinement_gradient_quantile: 0.99
+mature_refinement_scale_quantile: 0.90
+mature_refinement_mutation_enabled: false
+mature_refinement_maximum_events: 1
+mature_refinement_minimum_optimization_calls: 10
+mature_refinement_minimum_event_interval_calls: 8
+mature_refinement_maximum_clone_parents: 128
+mature_refinement_maximum_split_parents: 128
+mature_refinement_child_optimizer_state_mode: 0
+mature_refinement_clone_opacity_mode: 0
+mature_refinement_clone_child_opacity_fraction: 0.05
+mature_refinement_clone_appearance_mode: 0
+mature_refinement_clone_feature_dc_step_multiplier: 3.1622776601683795
+mature_refinement_children_provisional: false
+mature_refinement_split_scale_divisor: 1.6
+mature_refinement_split_offset_scale_fraction: 0.5
+mature_refinement_maximum_cumulative_growth_fraction: 1.0
+frequency_balanced_loss_enabled: false
+frequency_low_weight: 0.0
+frequency_gradient_weight: 0.0
+frequency_charbonnier_epsilon: 0.001
+
+apply_exposure: false
+exposure_mode: 1
+exposure_conditioning_mode: 0
+exposure_knot_interval_frames: 10
+exposure_maximum_knots: 4096
+exposure_identity_regularization_weight: 0.0
+exposure_temporal_smoothness_weight: 0.0
+exposure_adaptive_dssim_enabled: false
+exposure_adaptive_dssim_maximum_weight: 0.4
+exposure_adaptive_dssim_activation: 0.05
+exposure_adaptive_dssim_gradient_mode: 0
+exposure_adaptive_dssim_execution_mode: 0
+exposure_lr: 0.001
+skybox_points_num: 0  # 100000
+skybox_radius: 1000
+
+# B12 mature-map Gaussian pose-feedback observer: diagnostic only/default-off.
+feedback_observer_enabled: false
+feedback_observer_every_n_frames: 5
+feedback_observer_minimum_mature_gaussians: 10000
+feedback_observer_minimum_visual_confidence: 0.20
+feedback_observer_minimum_alpha: 0.50
+feedback_observer_minimum_gradient: 0.01
+feedback_observer_maximum_absolute_residual: 0.25
+feedback_observer_huber_delta: 0.05
+feedback_observer_sampling_stride: 4
+feedback_observer_minimum_samples: 500
+feedback_observer_minimum_render_coverage: 0.03
+feedback_observer_minimum_information_rank: 3
+feedback_observer_minimum_eigenvalue_ratio: 0.00001
+feedback_observer_maximum_condition_number: 1000000
+feedback_observer_damping: 0.000001
+feedback_observer_minimum_depth_metres: 0.10
+feedback_observer_maximum_depth_metres: 20.0
+feedback_observer_maximum_translation_update_metres: 0.50
+feedback_observer_maximum_rotation_update_degrees: 10.0
+feedback_observer_deadline_ms: 100.0
+
+# B13 observer-only pose validation harness: experiment-only and default-off.
+feedback_observer_validation_enabled: false
+feedback_observer_validation_start_frame: 50
+feedback_observer_validation_end_frame: 120
+feedback_observer_validation_translation_x: 0.0
+feedback_observer_validation_translation_y: 0.0
+feedback_observer_validation_translation_z: 0.0
+feedback_observer_validation_rotation_x_degrees: 0.0
+feedback_observer_validation_rotation_y_degrees: 0.0
+feedback_observer_validation_rotation_z_degrees: 0.0
+
+# B14a projected Gaussian feedback bridge: observe-only and default-off.
+feedback_shadow_publish_enabled: false
+feedback_shadow_allow_validation: false
+feedback_shadow_projection_mode: 0
+feedback_shadow_restricted_damping: 1.0e-6
+feedback_shadow_restricted_maximum_condition_number: 1.0e6
+feedback_shadow_gain: 0.25
+feedback_shadow_maximum_translation_metres: 0.03
+feedback_shadow_maximum_rotation_degrees: 0.5
+
+random_seed: 12345
+
+# B22b held-out update response: observe-only and default-off.
+mapping_update_response_observer_enabled: false
+mapping_update_response_minimum_held_out_views: 1
+mapping_update_response_maximum_held_out_views: 3
+mapping_update_response_every_n_updates: 1
+mapping_update_response_lpips_enabled: false
+adaptive_insertion_enabled: false
+insertion_confidence_low: 0.005
+insertion_confidence_high: 0.05
+insertion_min_budget: 2000
+insertion_max_budget: 6000
+insertion_structural_opacity_floor: 0.0
+insertion_binary_structural_coverage: false
+insertion_structural_depth_consistency_enabled: false
+insertion_structural_depth_tolerance_metres: 0.20
+insertion_structural_residual_recovery_enabled: false
+insertion_selection_mode: 1  # 1=index, 2=spatial grid, 3=grid + image gradient
+insertion_grid_rows: 16
+insertion_grid_cols: 20
+insertion_hybrid_baseline_fraction: 0.5
+insertion_residual_gate_enabled: false
+insertion_residual_gate_low: 0.015
+insertion_residual_gate_high: 0.040
+insertion_temporal_gate_enabled: false
+insertion_temporal_enter_threshold: 0.020
+insertion_temporal_exit_threshold: 0.006
+insertion_temporal_enter_frames: 2
+insertion_temporal_exit_frames: 30
+
+# G1 map guard: observer and enforcement are independently default-off.
+map_guard_observer_enabled: false
+map_guard_enforcement_enabled: false
+map_guard_enforcement_mode: 2  # 1=protect only, 2=protect + freeze
+map_guard_confidence_mode: 2  # 1=raw, 2=front-end normalized, 3=categorical
+map_guard_normal_pose_confidence: 0.05
+map_guard_freeze_pose_confidence: 0.005
+map_guard_protect_enter_frames: 1
+map_guard_freeze_enter_frames: 1
+map_guard_recovery_frames: 10
+map_guard_normalized_normal_confidence: 0.55
+map_guard_normalized_freeze_confidence: 0.20
+
+# G1d deterministic pose perturbation harness: experiment-only and default-off.
+pose_perturbation_enabled: false
+pose_perturbation_start_frame: 50
+pose_perturbation_end_frame: 89
+pose_perturbation_translation_x: 0.0
+pose_perturbation_translation_y: 0.0
+pose_perturbation_translation_z: 0.0
+pose_perturbation_roll_degrees: 0.0
+pose_perturbation_pitch_degrees: 0.0
+pose_perturbation_yaw_degrees: 0.0
+pose_perturbation_synthetic_guard_state: 0  # 0=none, 1=selective, 2=inertial-safe
+
+# D1-V1 depth-completion confidence: 0=legacy, 1=observer, 2=enforce.
+depth_confidence_mode: 0
+depth_confidence_minimum_lidar_support: 100
+depth_confidence_maximum_absolute_bias: 0.20
+depth_confidence_maximum_median_absolute_error: 0.20
+depth_confidence_maximum_mad: 0.10
+depth_confidence_support_distance_scale_pixels: 20.0
+depth_confidence_depth_edge_scale: 0.10
+depth_confidence_image_edge_scale: 0.50
+depth_confidence_image_texture_scale: 0.03
+depth_confidence_image_texture_floor: 0.25
+depth_confidence_range_scale_metres: 20.0
+depth_confidence_minimum_point_confidence: 0.05
+
+# D1-V1.6 local LiDAR-plane consistency: 0=off, 1=observer, 2=enforce.
+depth_geometry_mode: 0
+depth_geometry_search_radius_pixels: 100
+depth_geometry_search_radius_degrees: 9.45442
+depth_geometry_minimum_support: 12
+depth_geometry_depth_mad_scale: 3.0
+depth_geometry_minimum_depth_band_metres: 0.30
+depth_geometry_plane_mad_scale: 3.0
+depth_geometry_minimum_plane_band_metres: 0.05
+depth_geometry_maximum_planarity_ratio: 0.10
+depth_geometry_minimum_spread_ratio: 0.005
+depth_geometry_minimum_ray_plane_cosine: 0.05
+depth_geometry_maximum_depth_residual_metres: 0.20
+depth_geometry_accept_unverified: true
+
+# D1-V1.8 previous-keyframe sparse-LiDAR consistency: 0=off, 1=observer, 2=enforce.
+depth_temporal_mode: 0
+depth_temporal_association_radius_pixels: 8
+depth_temporal_occlusion_radius_pixels: 1
+depth_temporal_maximum_depth_residual_metres: 0.20
+depth_temporal_occlusion_depth_threshold_metres: 0.30
+depth_temporal_maximum_backward_error_pixels: 8.0
+depth_temporal_minimum_projected_depth_metres: 0.10
+depth_temporal_maximum_baseline_translation_metres: 2.0
+depth_temporal_maximum_baseline_rotation_degrees: 30.0
+depth_temporal_accept_unverified: true
+
+# D1-V2 confidence-weighted Gaussian initialization: 0=off, 1=observer, 2=apply.
+depth_soft_initialization_mode: 0
+depth_soft_residual_low_metres: 0.20
+depth_soft_residual_high_metres: 0.50
+depth_soft_minimum_opacity_multiplier: 0.25
+depth_soft_minimum_scale_multiplier: 1.0
+
+# D1-V1.5 controlled SPNet-output corruption: experiment-only/default-off.
+depth_corruption_enabled: false
+depth_corruption_mode: 1  # 1=bias, 2=noise, 3=holes, 4=edge bleed, 5=composite
+depth_corruption_start_frame: 50
+depth_corruption_end_frame: 89
+depth_corruption_seed: 12345
+depth_corruption_region_min_x: 0.25
+depth_corruption_region_max_x: 0.75
+depth_corruption_region_min_y: 0.25
+depth_corruption_region_max_y: 0.75
+depth_corruption_bias_metres: 0.50
+depth_corruption_noise_amplitude_metres: 0.25
+depth_corruption_hole_fraction: 0.25
+depth_corruption_edge_shift_pixels: 16
+
+
+# DA-LIVGS final paper profile. All values below are frozen for reproduction.
+appearance_conditioner_enabled: true
+appearance_architecture_mode: 2
+appearance_factor_rank: 16
+appearance_embedding_dimension: 16
+appearance_gaussian_feature_dimension: 16
+appearance_gaussian_fourier_frequencies: 0
+appearance_hidden_dimension: 64
+appearance_knot_interval_frames: 10
+appearance_maximum_knots: 4096
+appearance_residual_scale: 0.48
+appearance_gaussian_feature_lr: 0.005
+appearance_embedding_lr: 0.001
+appearance_mlp_lr: 0.0005
+appearance_timing_observer_enabled: false
+appearance_execution_scheduler_enabled: false
+appearance_execution_sparse_interval_calls: 10
+appearance_execution_sparse_anchor_views: 0
+appearance_execution_sparse_anchor_selection_mode: 0
+appearance_execution_skipped_render_mode: 0
+random_seed: 12345

@@ -1,0 +1,402 @@
+{
+  "status": "paper_profile_reference",
+  "profile": {
+    "appearance_residual_scale": 0.48,
+    "factor_rank": 16,
+    "gaussian_feature_dimension": 16,
+    "knot_interval_frames": 10,
+    "seed": 12345,
+    "appearance_architecture_mode": 2,
+    "appearance_embedding_dimension": 16,
+    "appearance_hidden_dimension": 64,
+    "appearance_gaussian_fourier_frequencies": 0
+  },
+  "run_count": 18,
+  "public_sequence_count": 15,
+  "campus_sequence_count": 3,
+  "mapping_exit_codes_all_zero": true,
+  "records": [
+    {
+      "label": "r3live-degenerate-00",
+      "manifest_sha256": "406946ca488882beeec75baf8039f9aad0c35e455bedcc78a9801e8d86514ffe",
+      "per_view_metrics_sha256": "0a1821dd0698592fcde9ef6f630b258c0809a65b9cd1a4c263fa9e45a9a966e2",
+      "test_frames": 641,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 25.716379497426907,
+        "ssim": 0.8401816597966806,
+        "lpips": 0.106527916017728
+      }
+    },
+    {
+      "label": "r3live-degenerate-01",
+      "manifest_sha256": "ff9964e665da16c476f3ad2c38eedf4a323f5760b0921cd0e12f4e60e3bd71ca",
+      "per_view_metrics_sha256": "b2590631e91259e009988a4d1abab86c0a3c6aab64180a7032accf51286ebed0",
+      "test_frames": 633,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 24.823576101571273,
+        "ssim": 0.8132927640448626,
+        "lpips": 0.12436826840796365
+      }
+    },
+    {
+      "label": "r3live-degenerate-02",
+      "manifest_sha256": "f499a6f7744c96a145fbcd6443b6cd7e332e31afdbc211e3cac7671d7cfb6366",
+      "per_view_metrics_sha256": "a8c64e074b359b99e1c94d4a71718b8e6355ca00b24ef069207065959899aa7c",
+      "test_frames": 763,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 28.560710539511586,
+        "ssim": 0.8931655058073341,
+        "lpips": 0.12880837756696098
+      }
+    },
+    {
+      "label": "fastlivo-visual",
+      "manifest_sha256": "1c2c5442452c20e2d5593bbb8ad651857eb92e17a496c630206b5b5296d79882",
+      "per_view_metrics_sha256": "3245655c212869a0a9a53cf7e96deac09173c4f4df5aee3d7fe6f83fa66d55c0",
+      "test_frames": 1244,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 26.556619217924748,
+        "ssim": 0.8560216157813931,
+        "lpips": 0.11821504518198048
+      }
+    },
+    {
+      "label": "fastlivo-lidar-degenerate",
+      "manifest_sha256": "82003c92dec0a706ace95f6d15cf7c4059dcb3f12321f65861ad2f28a0dad0a7",
+      "per_view_metrics_sha256": "1570729e58ea0b36e2524dc31f247be096f3b769062813daff146f353631e773",
+      "test_frames": 569,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 31.48449399978289,
+        "ssim": 0.8378095266479599,
+        "lpips": 0.0910715890134994
+      }
+    },
+    {
+      "label": "fastlivo2-bright",
+      "manifest_sha256": "31fdabf0a24e77c9ec36f74d07459c3e307e5305c4024971b55527302750cbc4",
+      "per_view_metrics_sha256": "1e8f2b2e10cdf0b270e96eb928e35fecf58d0dccaf491c69c95a76989ee1c53f",
+      "test_frames": 480,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 30.699250241120655,
+        "ssim": 0.9275802346567313,
+        "lpips": 0.05680727914053326
+      }
+    },
+    {
+      "label": "fastlivo2-cbd",
+      "manifest_sha256": "20994179ad37f81a28a75ca60526f981a36d6651f7256439629ec1b3197701b9",
+      "per_view_metrics_sha256": "257d016237b53d80f3209643e8c9473212dac90b096423921e6aa870b623a47a",
+      "test_frames": 897,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 28.179322875330147,
+        "ssim": 0.8847254083440987,
+        "lpips": 0.06292144042608996
+      }
+    },
+    {
+      "label": "fastlivo2-retail",
+      "manifest_sha256": "591e1e3c07dcae97176e7fa55db9a4e7ea5e4049d283f01d91ea115db5fbf486",
+      "per_view_metrics_sha256": "86b266231603b307f4dabd9f783b8a2acdc6700a58d1b6ea6c2442c3c73a5d23",
+      "test_frames": 1031,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 26.714944650777674,
+        "ssim": 0.8266400951823485,
+        "lpips": 0.08500969242286498
+      }
+    },
+    {
+      "label": "geode-flat",
+      "manifest_sha256": "e5ba358f72c68bf1d3eca302d018b58710b664b24477477bd57ca99436fd63cb",
+      "per_view_metrics_sha256": "2cf8b2941fac031e610fb1ffc0adc8282809c378878c798a6c0953f020c124fd",
+      "test_frames": 603,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 27.546092843139547,
+        "ssim": 0.6990544506121631,
+        "lpips": 0.19502189646708235
+      }
+    },
+    {
+      "label": "geode-offroad",
+      "manifest_sha256": "2f857a37677d8151994a0eba3b5bb51b7901fb20e445fcb9ead9e0c5e924feb3",
+      "per_view_metrics_sha256": "14c6a9784e5798c7af00f296ed405f7897a52ec008317eea4e4875899dce0ccc",
+      "test_frames": 1418,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 26.216832923620142,
+        "ssim": 0.7622496979192888,
+        "lpips": 0.2640879562568597
+      }
+    },
+    {
+      "label": "geode-tunnel1",
+      "manifest_sha256": "21d4e98dddaf8ca6c09799f2cf777d9a3efc0accf7aeb55d375173e2edae2466",
+      "per_view_metrics_sha256": "d7c527766162c45ec5843a8f4a2ec009c44c0c2f43b79a8a83c482b6c1e52147",
+      "test_frames": 1616,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 28.001167847968564,
+        "ssim": 0.7425152627511484,
+        "lpips": 0.19382602946906544
+      }
+    },
+    {
+      "label": "geode-tunnel2",
+      "manifest_sha256": "62dfaf131796b81dd7618b7d6849d9e9772c6f0b0c0a65a024d00b69918fcfc8",
+      "per_view_metrics_sha256": "6cd1b67ab49f0a485fd1343fba2226717355694c5ce019360849086ad6cf1165",
+      "test_frames": 2037,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 27.005762157337188,
+        "ssim": 0.7023347134852328,
+        "lpips": 0.2031015367537488
+      }
+    },
+    {
+      "label": "geode-tunnel3",
+      "manifest_sha256": "aeba9d5283e1448a1a35dcd4e9231a2e42b23229163c6b6c5f16fda2380b3bd0",
+      "per_view_metrics_sha256": "cd65997c0adb838cc0df56616a7cc3b12e18711935c1d54cb189f981fb263cab",
+      "test_frames": 1979,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 27.298213363115448,
+        "ssim": 0.7129910186030999,
+        "lpips": 0.19830657864397014
+      }
+    },
+    {
+      "label": "geode-tunnel4",
+      "manifest_sha256": "81e6ac4f8c30638b4c28996fdbf28bf59749cd7ba510d68faf3c7036d39f3b37",
+      "per_view_metrics_sha256": "9384f321acf348125f30f808f841a2ae86cf57733a1fe4592524eb8db942e511",
+      "test_frames": 1737,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 26.022242917778442,
+        "ssim": 0.6761175366091742,
+        "lpips": 0.22521401478527742
+      }
+    },
+    {
+      "label": "geode-tunnel5",
+      "manifest_sha256": "f04070da9a4b27506af4ef32e35f4666785ae0ae8506d8b0f77634c0681ff2b8",
+      "per_view_metrics_sha256": "ef360af02690c0be68fe8014b6548264e06854d954bf404946b702bce56eea59",
+      "test_frames": 1801,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 26.32925171563521,
+        "ssim": 0.6851159083320325,
+        "lpips": 0.20631217965644177
+      }
+    },
+    {
+      "label": "airy-campus-field",
+      "manifest_sha256": "79243a84d8fbabb1655a25ab7f3434edcd6eb3864599c184800ed10525a9c7ea",
+      "per_view_metrics_sha256": "52c4650f2242e56d06869b479cff9c4b3f241f11c1e8f2ebbcba667a9def20eb",
+      "test_frames": 436,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 20.504110139444332,
+        "ssim": 0.7659976236317136,
+        "lpips": 0.30205154866663686
+      }
+    },
+    {
+      "label": "airy-campus-slope",
+      "manifest_sha256": "0cc2d0ce68d520a5d4e70c202886eb1ef7f469beaf4c238bba27f9b0989df2c8",
+      "per_view_metrics_sha256": "e1c2754a0269b1b84050d0c7df934ece46d492b15210551326f897ef4c1e1d98",
+      "test_frames": 270,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 20.337687471177844,
+        "ssim": 0.6537467060265718,
+        "lpips": 0.31214091264539295
+      }
+    },
+    {
+      "label": "airy-campus-trees",
+      "manifest_sha256": "6fc5d8a5a48ee04eb232a8dbe9b9b95db422a068ba404dd7b338ba46214bce42",
+      "per_view_metrics_sha256": "49227784d03489162e32078050e620caa9ab32d0c23df8b512effa3bd02791f3",
+      "test_frames": 373,
+      "config": {
+        "appearance_residual_scale": "0.48",
+        "appearance_factor_rank": "16",
+        "appearance_gaussian_feature_dimension": "16",
+        "appearance_knot_interval_frames": "10",
+        "random_seed": "12345",
+        "mapping_exit_code": "0"
+      },
+      "mean_test_metrics": {
+        "psnr": 20.598359079846748,
+        "ssim": 0.730587848389756,
+        "lpips": 0.26387620994936045
+      }
+    }
+  ],
+  "sources": {
+    "frontend_snapshot": "frozen frontend source commit 7d819d8",
+    "mapping_snapshot": "frozen mapping source commit d628789",
+    "livox_driver_snapshot": "638e47994bdf9bbe64888eb6cbd6d04167bacc0c"
+  },
+  "current_local_verification": {
+    "date": "2026-11-20",
+    "build": "clean DA-LIVGS catkin build completed",
+    "sequences": {
+      "fastlivo2-cbd": {
+        "test_frames": 897,
+        "psnr": 28.18913390458361,
+        "ssim": 0.8848799111585287,
+        "lpips": 0.06286325266661585,
+        "paper_profile_psnr": 28.179322875330147,
+        "paper_profile_ssim": 0.8847254083440987,
+        "paper_profile_lpips": 0.06292144042608996
+      },
+      "fastlivo2-bright": {
+        "test_frames": 480,
+        "psnr": 30.569347405433653,
+        "ssim": 0.9267943762242794,
+        "lpips": 0.058257399200617024,
+        "paper_profile_psnr": 30.699250241120655,
+        "paper_profile_ssim": 0.9275802346567313,
+        "paper_profile_lpips": 0.05680727914053326
+      },
+      "geode-flat": {
+        "test_frames": 603,
+        "psnr": 25.325322774314564,
+        "ssim": 0.6496639559616892,
+        "lpips": 0.26101437849834386,
+        "paper_profile_psnr": 27.546092843139547,
+        "paper_profile_ssim": 0.6990544506121631,
+        "paper_profile_lpips": 0.19502189646708235
+      }
+    },
+    "note": "CBD and Bright are close to the archived paper profile. GEODE remains lower in this rerun because the frontend trajectory differs from the archived run. The generated outputs remain outside the repository.",
+    "dependency_note": "The current release build was validated with OpenCV 4.7 and PCL 1.13.1. The archived paper executable links system OpenCV 4.2, and GEODE is sensitive to this runtime difference."
+  }
+}

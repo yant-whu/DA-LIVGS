@@ -1,0 +1,15 @@
+catkin_ws/build/
+catkin_ws/devel/
+catkin_ws/log/
+results/
+outputs/
+*.bag
+*.db3
+*.las
+*.pcd
+*.ply
+*.pth
+*.onnx
+*.engine
+__pycache__/
+*.py[cod]
